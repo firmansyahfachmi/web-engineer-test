@@ -1,0 +1,22 @@
+.box-search{
+    margin-right: 12px;
+    display: flex;
+
+    
+    &__input{
+        .MuiOutlinedInput-root{
+       border-radius: 4px 0 0 4px !important;
+        }
+        
+       
+    }
+    &__btn{
+        color: #000;
+        border-radius: 0 4px 4px 0 !important;
+        box-shadow: none !important;
+
+        &:hover{
+            box-shadow: none !important;
+        }
+    }
+}
