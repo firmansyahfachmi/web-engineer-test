@@ -1,2 +1,57 @@
 $primary: #1890FF;
-$light-grey: #eee
+$light-grey: #eee;
+
+$media-query: (
+        fourk,
+        (
+            min-width: 2560px,
+        )
+    ),
+    (
+        twok,
+        (
+                min-width: 1920px,
+            )
+            // and
+        // (
+        //   max-width: 2559px,
+        // )
+    ),
+    (
+        wide,
+        (
+            min-width: 1441px,
+        )
+    ),
+    (
+        laptop,
+        (
+                min-width: 1024px,
+            )
+            and
+            (
+                max-width: 1199px,
+            )
+    ),
+    (
+        tablet,
+        (
+                min-width: 768px,
+            )
+            and
+            (
+                max-width: 991px,
+            )
+    ),
+    (
+        mobile,
+        (
+            max-width: 767px,
+        )
+    ),
+    (
+        small-mobile,
+        (
+            max-width: 360px,
+        )
+    );

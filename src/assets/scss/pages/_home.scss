@@ -4,6 +4,12 @@
         display: flex;
         margin-bottom: 24px;
 
+        @include breakpoint(mobile)
+        {
+            flex-direction: column;
+            
+        }
+
         
 
         .btn-reset{
@@ -11,6 +17,11 @@
             background-color: #fff;
             border: 1px solid #c0c0c0;
             box-shadow: none;
+            @include breakpoint(mobile)
+            {
+                margin-top: 14px;
+                
+            }
 
             &:hover{
                 background-color: #f1f1f1;

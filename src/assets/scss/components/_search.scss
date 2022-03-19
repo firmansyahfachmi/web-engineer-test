@@ -1,10 +1,22 @@
 .box-search{
     margin-right: 12px;
     display: flex;
+    @include breakpoint(mobile)
+    {
+        width: 100%;
+        margin-bottom: 14px;
+        
+    }
 
     
     &__input{
+        width: 100% !important;
         .MuiOutlinedInput-root{
+            @include breakpoint(mobile)
+            {
+                width: 100% !important;
+                
+            }
        border-radius: 4px 0 0 4px !important;
             &:focus{
             border-width: 1px !important;
