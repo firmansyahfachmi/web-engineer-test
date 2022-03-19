@@ -6,6 +6,10 @@
     &__input{
         .MuiOutlinedInput-root{
        border-radius: 4px 0 0 4px !important;
+            &:focus{
+            border-width: 1px !important;
+            border-color: red !important;
+            }
         }
         
        
@@ -18,5 +22,7 @@
         &:hover{
             box-shadow: none !important;
         }
+
+        
     }
 }

@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import {TextField, MenuItem} from '@mui/material'
 
 
-const Sorter = (prop) => {
-    const [gender, setGender] = useState('All')
+const Sorter = (props) => {
+
+  const [gender, setGender] = useState('All')
 
     const genders = [
         {
-          value: 'Man',
-          label: 'Man',
+          value: 'Male',
+          label: 'Male',
         },
         {
-          value: 'Woman',
-          label: 'Woman',
+          value: 'Female',
+          label: 'Female',
         },
         {
           value: 'All',
@@ -21,9 +22,14 @@ const Sorter = (prop) => {
       ];
 
 
-      const handleChange = (event) => {
-        setGender(event.target.value);
-      };
+      const changehe = (e) =>{
+
+        setGender(e.target.value)
+
+        props.handleChange(e.target.value)
+      }
+
+
 
  return(
      <div>
@@ -31,8 +37,8 @@ const Sorter = (prop) => {
           select
           label="Gender"
           value={gender}
-          onChange={handleChange}
-          className={`sort-field ${prop.cname}`}
+          onChange={changehe}
+          className={`sort-field ${props.cname}`}
           size="small"
           
         >
