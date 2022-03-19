@@ -51,6 +51,26 @@ const user = (state = initialState, action) => {
                 isFulfilled: true,
                 users: action.payload.data.results
             }
+        case 'GET_USER_KEYWORD_PENDING':
+            return{
+                ...state,
+                isLoading: true,
+                isFulfilled: false,
+                isRejected: false,
+            };
+        case 'GET_USER_KEYWORD_REJECTED':
+            return{
+                ...state,
+                isLoading: false,
+                isRejected: true,
+            };
+        case 'GET_USER_KEYWORD_FULFILLED':
+            return{
+                ...state,
+                isLoading: false,
+                isFulfilled: true,
+                users: action.payload.data.results
+            }
         default :
             return state
     }

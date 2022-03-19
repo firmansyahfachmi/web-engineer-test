@@ -3,7 +3,14 @@ import {TextField, Button} from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 
 
+
 const Search = (prop) => {
+
+    const [searchInput, setSearch] = useState('')
+
+    const formChange = (e) => {
+        setSearch(e.target.value)
+    }
  return(
      <div className="box-search">
           <TextField
@@ -11,13 +18,14 @@ const Search = (prop) => {
           label="Search"
           placeholder="Search.."
           multiline
+          onChange={formChange}
           className={`box-search__input ${prop.cname}`}
             size="small"
 
             
         />
         
-        <Button variant="contained" className="box-search__btn" size="small">
+        <Button variant="contained" className="box-search__btn" size="small" onClick={() => prop.handleChange(searchInput)}>
             
                 <SearchIcon/>
             

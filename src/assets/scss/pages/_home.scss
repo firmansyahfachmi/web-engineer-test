@@ -30,5 +30,11 @@
         float: right;
         margin-top: 16px;
         padding-bottom: 40px;
+
+        .Mui-selected{
+            color: $primary;
+            border-color: $primary;
+            background-color: #fff !important;
+        }
     }
 }

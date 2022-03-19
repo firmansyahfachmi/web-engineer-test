@@ -6,6 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {IconButton} from '@mui/material';
+import FilterListIcon from '@mui/icons-material/FilterList';
 
 
 
@@ -18,11 +20,28 @@ export default function TableData(props) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table" className='tableData'>
         <TableHead className="tableData__head">
           <TableRow>
-            <TableCell>Username</TableCell>
-            <TableCell >Name</TableCell>
-            <TableCell >Email</TableCell>
-            <TableCell >Gender</TableCell>
-            <TableCell >Registered Date</TableCell>
+            <TableCell>
+              
+                Username</TableCell>
+            <TableCell > 
+            <IconButton onClick={() => props.handleSort('name')}>
+            <FilterListIcon fontSize="small"/>
+                </IconButton>
+               Name</TableCell>
+            <TableCell >
+              <IconButton onClick={() => props.handleSort('email')}>
+                <FilterListIcon fontSize="small"/>
+              </IconButton>Email</TableCell>
+            <TableCell >
+            <IconButton onClick={() => props.handleSort('gender')}>
+              <FilterListIcon fontSize="small"/>
+            </IconButton>
+              Gender</TableCell>
+            <TableCell >
+              <IconButton onClick={() => props.handleSort('registeredDate')}>
+                <FilterListIcon fontSize="small"/>
+              </IconButton>
+              Registered Date</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
